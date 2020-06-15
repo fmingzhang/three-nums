@@ -1,0 +1,51 @@
+// demo.cpp : 定义控制台应用程序的入口点。
+//
+
+#include "stdafx.h"
+#include<iostream>
+#include<Windows.h>
+//#include <cstdio>
+using namespace std;
+#define n 6
+
+int main()
+{
+	
+	int nums[100];
+	int i;
+	for (i = 0; i < n; i++) {
+		cin >> nums[i];
+	}
+	cout << "[";
+	int x, y, a, b, c,k;
+	for (x = 0; x < n - 2; x++)
+	{
+		a = nums[x];
+		for (y = x + 1; y < n-1; y++)
+		{
+			b = nums[y];
+			c = -a - b;
+			
+			
+			for (k = y+1; k < n;k++)
+			{
+
+
+			if(c==nums[k])
+			{
+			  if (k == x || k == y);
+			  else { cout << "[" << a << "," << b << "," << c << "],"; }
+			}
+			
+			}
+
+		}
+
+	}
+	cout << "]";
+	
+
+	system("pause");
+    return 0;
+}
+
